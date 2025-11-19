@@ -65,5 +65,5 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 .first a:hover {
-    background-color: #EDC871; /* effet au survol */
+    background-color: #EDC871; 
 }

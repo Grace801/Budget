@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 30px;
+    display: flex; 
+    align-items: center;
+}
+.logo a{
+    text-decoration: none;
+    color: goldenrod;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 400px;
+    border-radius: 50px;
+    padding: 50px;
+    gap: 20px;
+}
+form h1{
+    font-family: sans-serif;
+    font-size: 2.5em; 
+    color: #458D90;
+}
+form p{
+    color: goldenrod;
+}
+form a{
+    color: #121031;
+    padding: 10px;
+}
+input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.connect{
+    background-color: #2E3A64;
+    color: #fff;
+    font-weight: bold;
+}
