@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connexion - BudgetGest</title>
     <link rel="stylesheet" href="./assets/css/login.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">BudgetGest</a>
-        </div>
-    </header>
-    <main>
-        <form action="" method="post">
-            <div>
-                <h1>Connexion</h1>
-                <p>Nouveau sur ce site ? <a href="register.html">Créer un compte</a></p>
-            </div>
-            
-            <label for="email">Email</label>
-            <input type="e-mail" name="email" id="email" required>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="" id="password" required>
-            <input type="submit" value="Connexion" class="connect">
-            <span> <a href="#">Email oublié ?</a><a href="#">Mot de passe oublié ?</a> </span>
-        </form>
-    </main>
-    <footer>
+<header>
+    <div class="logo">
+        <a href="index.html">BudgetGest</a>
+    </div>
+</header>
 
-    </footer>
+<main>
+    <form action="" method="post">
+        <div>
+            <h1>Connexion</h1>
+            <p>Nouveau sur ce site ? <a href="register.html">Créer un compte</a></p>
+        </div>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <!-- Mot de passe -->
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" required>
+
+        <!-- Bouton -->
+        <input type="submit" value="Connexion" class="connect">
+
+        <!-- Liens -->
+        <span class="links">
+            <a href="#">Email oublié ?</a>
+            <a href="#">Mot de passe oublié ?</a>
+        </span>
+    </form>
+</main>
+
+<footer>
+</footer>
+
 </body>
 </html>
