@@ -13,7 +13,7 @@ body{
     height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.88rem;
-    background-color: #f6f6f9;
+    background-color: white;
     user-select: none;
     overflow-x: hidden;
 }
@@ -67,8 +67,8 @@ b{
 .success{
 
 }
-warning{
-
+.warning{
+    color: goldenrod;
 }
 aside{
     height: 100vh;
@@ -114,9 +114,132 @@ aside .sidebar a{
 }
 aside .sidebar span a{
     font-size: 1.6rem;
+    transition: all 300ms ease;
 }
 aside .sidebar a:last-child{
     position: absolute;
     bottom: 2rem;
     width: 100%;
+}
+aside .sidebar a:hover{
+    color: #f6f6f9;
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+main{
+    margin-top: 1.4rem;
+}
+.cartes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+main .cartes > div{
+    background-color: #458D90;
+    padding:1.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 2rem 3rem rgba(0,0,0,0.3);
+    transition: all 300ms ease;
+} 
+main .cartes > div:hover{
+    box-shadow: none;
+}
+main .cartes > div span{
+    background: #904545;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: white;
+}
+main .cartes > div.depense span{
+    background: #E07A5F;
+}
+main .cartes > div.revenus span{
+    background: goldenrod;
+} 
+main .cartes > div .centre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .cartes h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+main .cartes .progres{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50px;
+}
+main .cartes svg{
+    width: 7rem;
+    height: 7rem;
+}
+main .cartes svg circle{
+    fill: none;
+    stroke: #2E3A64;
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+main .cartes .revenus svg circle{
+    stroke-dasharray: -30;
+    stroke-dashoffset: 150;
+}
+main .cartes .depense svg circle{
+    stroke-dasharray: -20;
+    stroke-dashoffset: 110;
+}
+main .cartes .solde svg circle{
+    stroke-dasharray: -35;
+    stroke-dashoffset: 110;
+}
+main .cartes .progres .pourcent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+main .cartes small{
+    margin-top: 1.3rem;
+    display: block;
+}
+main .transactions{
+    margin-top: 2rem;
+}
+
+main .transactions table{
+    background: whitesmoke;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    margin-top: 1rem;
+    text-align: center;
+    box-shadow: 0 2rem 3rem rgba(0,0,0,0.1);
+    transition: all 300ms ease;
+}
+main .transactions table:hover{
+    box-shadow: none;
+}
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid #363949;
+}
+main table tbody tr:last-child td{
+    border: none;
+}
+main a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: goldenrod;
 }
