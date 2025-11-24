@@ -22,7 +22,7 @@ body{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
+    grid-template-columns: 13rem 1fr 15rem;
 }
 a{
     color: goldenrod;
@@ -50,7 +50,7 @@ small{
     overflow: hidden;
 }
 .text-bas{
-    color: #7d8da1;
+    color: #0c223d;
 }
 p{
     color: #677483;
@@ -58,18 +58,42 @@ p{
 b{
     color: #363949;
 }
-.primary{
-
-}
-.danger{
-
-}
-.success{
-
-}
 .warning{
     color: goldenrod;
 }
+/* -------- MODE SOMBRE -------- */
+.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+.dark-mode aside {
+    background-color: #1e1e1e;
+}
+.dark-mode main .cartes > div {
+    background-color: #1f2a2b;
+    box-shadow: none;
+}
+.dark-mode main .transactions table {
+    background-color: #1e1e1e;
+}
+.dark-mode .profil .tops {
+    background: #1e1e1e;
+}
+.dark-mode a {
+    color: #ffcc66;
+}
+/* ------ Mode sombre graphique------ */
+.dark-mode .cartes svg circle {
+    stroke: goldenrod; 
+}
+.dark-mode .cartes > div {
+    background-color: #1d2e2f;
+    color: #e3e3e3;
+}
+.dark-mode .cartes small {
+    color: #cfcfcf;
+}
+/* ------------Sidebar(barre de navigation verticale)-----------------*/
 aside{
     height: 100vh;
     background-color: #2E3A64;
@@ -130,6 +154,7 @@ aside .sidebar a:hover span{
 main{
     margin-top: 1.4rem;
 }
+/* ------------Mes cartes (solde,depense...)-----------------*/
 .cartes{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -213,10 +238,10 @@ main .cartes small{
     margin-top: 1.3rem;
     display: block;
 }
+/* ------------Tableau des transactions éffeutées-----------------*/
 main .transactions{
     margin-top: 2rem;
 }
-
 main .transactions table{
     background: whitesmoke;
     width: 100%;
@@ -243,3 +268,190 @@ main a{
     margin: 1rem auto;
     color: goldenrod;
 }
+/* ------------Profil(image utilisateur, mode sombre/mode claire....)-----------------*/
+.profil{
+    margin-top: 1.4rem;
+}
+.tops{
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+.profil .tops button{
+    display: none;
+}
+.profil .theme-toggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    background: rgba(132, 139, 200, 0.18);
+    border-radius: 0.4rem;
+}
+.profil .theme-toggle span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profil .theme-toggle span.active{
+    background: #121031;
+    color: white;
+    border-radius: 0.4rem;
+}
+.profil .tops .profile{
+    display: flex;
+    gap: 1rem;
+    text-align: right;
+}
+.profil-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd;
+}
+.profil-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*      MEDIA QUERIES*/
+
+@media screen and (max-width: 1200px) {
+    .cartes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        grid-template-columns: 12rem 1fr 13rem;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+    aside .sidebar a{
+        width: 5.6rem;
+        
+    }
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    .cartes {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    main .transactions{
+        width: 94%;
+        position: absolute;
+        left: 50px;
+        transform: translateX(-20%);
+        margin: 2rem 0 0 8.8rem;
+    }
+    main .transactions table{
+        width: 83vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        position: fixed;
+        left: 0;
+        width: 18rem;
+        z-index: 3;
+        height: 100vh;
+        box-shadow: 1rem 3rem 4rem rgba(132, 139, 200, 0.18);
+        padding-right: 1.8rem;
+        display: none;
+    }
+    aside .logo{
+        margin-left: 1rem;
+    }
+    aside .logo h2{
+        display: inline;
+    }
+     aside .logo h3{
+        display: inline;
+    }
+     aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+    aside .close{
+        display: inline;
+        cursor: pointer;
+    }
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+    main .transactions{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+    main .transactions table{
+        width: 100%;
+        margin: 0;
+    }
+    .profil{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+    .profil .tops{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: #fff;
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+    }
+    .profil .tops button{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+        color: #363949;
+        left: 1rem;
+        font-size: 2rem;
+    }
+    .profil .tops button span{
+        font-size: 2rem;
+    }
+    .profil .tops .theme-toggle{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+    .profil .profile .info{
+        display: none;
+    }
+    
+
+
+}
+
