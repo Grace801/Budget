@@ -120,6 +120,70 @@
                 </div>
                 <div class="transactions">
                     <h1>Dernieres Transactions</h1>
+
+                    <button id="btn-add" class="btn-add">+ Ajouter une transaction</button>
+
+                    <!-- Modal ajout transaction -->
+                    <div id="modal-add" class="modal">
+                       <div class="modal-content">
+                         <span class="close-modal">&times;</span>
+                         <h2>Ajouter une transaction</h2>
+                            <form id="form-add-transaction">
+                               <label for="type">Type :</label>
+                               <select id="type" name="type" required>
+                                 <option value="revenu">Revenu</option>
+                                 <option value="depense">Dépense</option>
+                               </select>
+
+                               <label for="description">Description :</label>
+                               <input type="text" id="description" name="description" required>
+
+                               <label for="category">Catégorie :</label>
+                               <input type="text" id="category" name="category" required>
+
+                               <label for="amount">Montant :</label>
+                               <input type="number" id="amount" name="amount" required>
+
+                               <label for="date">Date :</label>
+                               <input type="date" id="date" name="date" required>
+
+                               <button type="submit">Ajouter</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Modal modifier transaction -->
+                    <div id="modal-edit" class="modal">
+                        <div class="modal-content">
+                            <span class="close-modal-edit">&times;</span>
+                            <h2>Modifier la transaction</h2>
+                            <form id="form-edit-transaction">
+                               <input type="hidden" id="edit-id"> <!-- stocke l'id de la transaction -->
+
+                               <label for="edit-type">Type :</label>
+                               <select id="edit-type" name="type" required>
+                                 <option value="revenu">Revenu</option>
+                                 <option value="depense">Dépense</option>
+                                </select>
+
+                                <label for="edit-description">Description :</label>
+                                <input type="text" id="edit-description" name="description" required>
+
+                                <label for="edit-category">Catégorie :</label>
+                                <input type="text" id="edit-category" name="category" required>
+
+                                <label for="edit-amount">Montant :</label>
+                                <input type="number" id="edit-amount" name="amount" required>
+
+                               <label for="edit-date">Date :</label>
+                               <input type="date" id="edit-date" name="date" required>
+
+                               <button type="submit">Modifier</button>
+                            </form>
+                        </div>
+                    </div>
+
+
                     <table>
                         <thead>
                             <tr>
@@ -127,6 +191,7 @@
                               <th>Description</th>
                               <th>Categorie</th>
                               <th>Montant</th>
+                              <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -136,6 +201,10 @@
                               <td>Dépense</td>
                               <td class="depenses">-5000F</td>
                               <td class="warning">details</td>
+                              <td>
+                                  <button class="btn-edit">Modifier</button>
+                                  <button class="btn-delete">Supprimer</button>
+                              </td>
                             </tr>
                             <tr>
                               <td>21/11/2025</td>
@@ -143,6 +212,10 @@
                               <td>Revenu</td>
                               <td class="revenu">+100000F</td>
                               <td class="warning">details</td>
+                              <td>
+                                  <button class="btn-edit">Modifier</button>
+                                  <button class="btn-delete">Supprimer</button>
+                              </td>
                             </tr>
                             <tr>
                               <td>21/11/2025</td>
@@ -150,6 +223,10 @@
                               <td>Revenu</td>
                               <td class="revenu">+10000F</td>
                               <td class="warning">details</td>
+                              <td>
+                                  <button class="btn-edit">Modifier</button>
+                                  <button class="btn-delete">Supprimer</button>
+                              </td>
                             </tr>
                             <tr>
                               <td>21/11/2025</td>
@@ -157,6 +234,10 @@
                               <td>Dépense</td>
                               <td class="depenses">-100000F</td>
                               <td class="warning">details</td>
+                              <td>
+                                  <button class="btn-edit">Modifier</button>
+                                  <button class="btn-delete">Supprimer</button>
+                              </td>
                             </tr>
                         </tbody>
                     </table>
